@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href ="jquery-treetable-master/css/jquery.treetable.css">
+<link rel="stylesheet" href="jquery-treetable-master/css/jquery.treetable.theme.default.css">
+<script src ="jquery-treetable-master/jquery.treetable.js"></script>
+</head>
+<body>
+
+
+	<h1>Example of tree table</h1>
+
+	<!-- <table id="table1" border="1" class="treetable">
+		<thead>
+			<th>Transaction</th>
+			<th>Price</th>
+		</thead>
+
+		<tr data-tt-id="1">
+			<td>Fee</td>
+		</tr>
+		<tr data-tt-id="2" data-tt-parent-id="1">
+			<td>Tuition Fee</td>
+			
+
+			
+		</tr>
+		
+		<tr data-tt-id="4" data-tt-parent-id="2">
+			<td>Monthly Fee</td>
+			<td>454545</td>
+		
+		</tr>
+
+		<tr data-tt-id="5" data-tt-parent-id="2">
+			<td>Lab Fee</td>
+			<td>4545</td>
+		</tr>
+
+		<tr data-tt-id="3" data-tt-parent-id="1">
+			<td>Semester Fee</td>
+			<td>5454</td>
+		</tr> -->
+		<!-- <tr data-tt-id="6" data-tt-parent-id="3">
+			<td>Objective-c</td>
+		</tr>
+		<tr data-tt-id="7" data-tt-parent-id="3">
+			<td>c</td>
+		</tr> -->
+
+	<!-- </table> -->	
+
+	<table id="table1">
+		<thead>
+			<th>Transaction</th>
+			<th>Price</th>
+		</thead>
+		<tr data-tt-id="1">
+			<td>Fee</td>
+		</tr>
+		<tbody data-bind="foreach: fees">
+
+			<tr data-tt-id="2" data-tt-parent-id="1">
+				<td><span data-bind="text: name"></span></td>
+				<td><span data-bind="text: price"></span></td>
+			</tr>
+			
+		</tbody>
+
+		<tbody data-bind="foreach: tuitionFee">
+			<tr data-tt-id="5" data-tt-parent-id="2">
+				<td><span data-bind="text: name"></span></td>
+				<td><span data-bind="text: price"></span></td>
+			</tr>
+			
+		</tbody>
+		<tr data-tt-id="4">
+			<td>Lab</td>
+		</tr>
+
+
+		<tbody data-bind="foreach: labs">
+			<tr data-tt-id="3" data-tt-parent-id="4">
+				<td><span data-bind="text: name"></span></td>
+				<td><span data-bind="text: price"></span></td>
+			</tr>
+			
+		</tbody>
+		
+		<tr>
+			<td>Total</td>
+			<td><span data-bind="text: total"></span></td>
+		</tr>
+	</table>
+
+
+
+
+	
+	<script src="jquery.js"></script>
+	<script src ="jquery-treetable-master/jquery.treetable.js"></script>
+	<script src="knockout.js"></script>
+	<script src ="fee.js"></script>
+	<script>
+
+ 	
+ 		$("#table1").treetable({ expandable: true });
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Computed Knockout JS
+		</title>
+		<script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" 
+         type = "text/javascript"></script>
+    </head>
+
+
+<body>
+
+	<p>Enter quantity:<input data-bind ="value:quantity"/></p>
+	<p> Enter price:<input data-bind = "value:price"/></p>
+
+	<p data-bind = "text:total">Total amount: </p>
+
+
+	<script>
+
+		function TotalModelView(){
+
+			this.quantity = ko.observable(0)
+			this.price = ko.observable(0)
+			this.total = ko.computed(function(){
+
+				if(typeof(this.quantity())!=="number" || typeof(this.price())!=="number"){
+
+					this.quantity(Number(this.quantity()));
+					this.price(Number(this.price()));
+
+					total = this.quantity() * this.price();
+					return total;
+
+				}
+			},this);
+		}
+
+		ko.applyBindings(new TotalModelView())
+
+	</script>

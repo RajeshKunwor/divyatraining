@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> </title>
+	<script src = "knockout.js" 
+         type = "text/javascript"></script>
+   
+</head>
+
+<body>
+	<h1>Seat Reservations: <span data-bind="text: seats().length"></span></h1>
+
+	<button data-bind="click: addSeat">Add new seat</button>
+	<table border="1">
+		<thead>
+			<th>Passenger name</th>
+			<th>Meal</th>
+			<th>Price</th>
+		</thead>
+		<tbody data-bind="foreach: seats">
+			<tr>
+				<td><input data-bind="value: name"></td>
+				<td> <select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'">
+				</select></td>
+				<td data-bind="text: formattedPrice"></td>
+				<td><a  data-bind="click: $root.removeSeat" href="#">Remove Seat</a></td>
+
+
+			</tr>
+		</tbody>
+	</table>
+
+	<p data-bind="visible: totalPrice()>0">
+		
+		Total Price: <span data-bind ="text: totalPrice().toFixed(2)"></span>	
+	</p>
+
+
+	<script>
+
+		function SeatReservation(name, initialMeal){
+
+			var self = this;
+			self.name = name;
+			self.meal = ko.observable(initialMeal);
+
+			self.formattedPrice = ko.computed(function(){
+				var price = self.meal().price;
+
+				return price ? "Rs" +price.toFixed(2) :"None";
+			});
+		}
+
+		//viewModel
+
+		function ReservationViewModel(){
+
+			var self = this;
+
+			self.availableMeals = [
+				{mealName: "Nepali Khana", price: 120},
+				{ mealName: "Thakali Khana", price: 200},
+				{ mealName: "Chinese Khana", price: 300},
+			];
+
+
+			//editable data
+
+			self.seats = ko.observableArray([
+
+				new SeatReservation("Rajesh", self.availableMeals[1]),
+				new SeatReservation("Hari", self.availableMeals[0]),
+				]);
+
+			// add new seat
+
+			self.addSeat = function(){
+				self.seats.push(new SeatReservation("", self.availableMeals[2]));
+			}
+
+
+			// remove seat
+			self.removeSeat = function(seat){
+
+				self.seats.remove(seat);
+			}
+
+
+
+			self.totalPrice = ko.computed(function(){
+
+				var total = 0;
+				for(var i=0;i<self.seats().length;i++){
+					total+=self.seats()[i].meal().price;
+
+				}
+				return total;
+
+
+
+			});
+
+		}
+
+		ko.applyBindings(new ReservationViewModel());
+	</script>
+</body>
+</html>

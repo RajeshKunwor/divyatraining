@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href ="jquery-treetable-master/css/jquery.treetable.css">
+	<link rel="stylesheet" href="jquery-treetable-master/css/jquery.treetable.theme.default.css">
+</head>
+
+<body>
+	<h3>Demo of Json</h3>
+	<table id="mytable">
+		<thead>
+			<th>Particular</th>
+		</thead>
+		<tbody data-bind="template:{ name:'treetable', foreach: category}">
+		
+
+		</tbody>
+
+	</table>
+	<script type="text/html" id="treetable">
+		
+				
+				<tr data-bind="template: 'treetable' ">
+				
+					<td><span data-bind="text: name"></span></td>
+				</tr>
+
+	</script>
+
+	
+<!-- 
+	<table id="mytable" border="1">
+		<thead>
+			<th>Particular</th>
+		</thead>
+		<tbody data-bind="foreach: category">
+			<tr data-bind="attr: {'data-tt-id': $data.id, 'data-tt-parent-id': $data.parent}">
+				<td><span data-bind="text: $data.name"></span></td>
+			</tr>
+
+		</tbody>
+	</table> -->
+
+<!--  	<button onclick="createTreeTable()">Ceate Table</button> -->
+ 	<!-- <table id="mytable">
+ 		<thead>
+ 			<th>Particular</th>
+ 		</thead>
+ 		<tbody id="mytbody">
+ 		</tbody>
+ 	</table>
+ -->
+	<script src="jquery.js"></script>
+	<script src ="jquery-treetable-master/jquery.treetable.js"></script>
+	<script src="knockout.js"></script>
+
+	<script src="tasks.json"></script>
+
+	<script src="task.js"></script>
+	<script>
+
+ 	
+ 		$("#mytable").treetable({ expandable: true });
+
+	</script>	
+</body>
+</html>

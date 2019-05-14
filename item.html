@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+		<button data-bind="click: addItem">Add Item</button>
+
+		<table border="1">
+			<caption> Item List: <span data-bind ="text: items().length"></span></caption>
+			<thead>
+				<th>Name</th>
+				<th>Quantity</th>
+				<th>Rate</th>
+				<th>Total</th>
+				<th>Action</th>
+			</thead>
+			<tbody data-bind="foreach: items ">
+				<tr>
+					<td> <select data-bind="options: $root.itemSet, value: itemList, optionsText: 'name'"></select></td>
+					<td><input data-bind="value: quantity"></td>
+					<td><input data-bind="value: newRate"></td>
+					<td><span data-bind="text: total"></span></td>
+					<td><button data-bind="click: $root.removeItem">Delete</button></td>
+				</tr>
+			</tbody>
+
+				<tr>
+					<td colspan="3">Grand Total</td>
+					<td><span data-bind="text: grandTotal"></span></td>
+				</tr>
+				<tr>
+					<td colspan="3">Discount</td>
+					<td><input data-bind="value: discount"></td>
+				</tr>
+				<tr>
+					<td colspan="3">Net Total</td>
+					<td><span data-bind="text: netTotal"></span></td>
+				</tr>
+
+			
+
+		</table>
+
+		<script src = "knockout.js" 
+         type = "text/javascript"></script>
+
+     	<script type="text/javascript" src="item1.js"></script>
+
+</body>
+</html>

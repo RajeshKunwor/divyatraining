@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KNockout js </title>
+		<script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" 
+         type = "text/javascript"></script>
+	</head>
+
+<body>
+		<input data-bind = "value:countryName"/>
+		<input data-bind ="value:goal"/>
+
+		<p data-bind = "text:countryName">Country: </p>
+		<p data-bind = "text:goal">Goal: </p>
+		<p data-bind = "text:countryCode"></p>
+
+		<script>
+			function GameModelView(){
+
+				this.countryName =  ko.observable("Nepal")
+				this.goal = ko.observable(0)
+			}
+
+			// GameModelView.countryCode(400)
+
+			ko.applyBindings(new GameModelView())
+		</script>		
+
+</body>
+</html>
