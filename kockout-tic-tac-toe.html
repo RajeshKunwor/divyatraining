@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	button{
+		width: 20px;
+		height: 20px;
+		padding: 3px;
+
+	
+	}
+	button:hover{
+		background-color: #af45cd; 
+	}
+	</style>
+</head>
+<body>
+	<h4>Tic Tac Toe Game</h4>
+
+	<div class="gameboard" data-bind="with: gameBoard">
+            <div  data-bind="foreach: topRow">
+                <button data-bind="text: state, click: $parents[1].placeMarker"></button>
+            </div>
+            <div data-bind="foreach: middleRow">
+                <button data-bind="text: state, click: $parents[1].placeMarker"></button>
+            </div>
+            <div data-bind="foreach: bottomRow">
+                <button data-bind="text: state, click: $parents[1].placeMarker"></button>
+            </div>
+        </div>
+
+         <div data-bind="with: gameBoard">
+            <p data-bind="text: message"></p>
+          </div>
+
+
+    <script src="knockout.js"></script>
+	<script src ="tic-tac-toe.js"></script>
+	
+</body>
+</html>
