@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" 
+         type = "text/javascript"></script>
+  	</head>
+
+  	<style>
+
+  	li.selected{
+
+
+  		color: red;
+
+  	}
+  	li{
+  		text-decoration: none;
+  		float: left;
+  		border-right: solid 2px;
+  		display: inline-block;
+  		background: #34adf0;
+  	}
+  </style>
+ <body>
+
+
+ 	<p data-bind = "text: chosenFolderId"></p> 
+
+ 	<ul class="folders" data-bind="foreach: folders">
+ 			
+ 		<li data-bind="text: $data,
+ 						css: {selected: $data == $root.chosenFolderId() },
+ 						click: $root.goToFolder"></li>.
+ 	</ul>
+
+
+
+ 	<script>
+
+ 		function RajeshMailViewModel(){
+
+ 			var self = this;
+ 			self.folders = ['Inbox', 'Update' ,'Forum'];
+ 			self.chosenFolderId = ko.observable();
+ 
+ 			self.goToFolder = function(folder){self.chosenFolderId(folder)};
+ 		};
+
+
+ 		ko.applyBindings(new RajeshMailViewModel());
+ 	</script>
+ </body>
+ </html>

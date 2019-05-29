@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Company Salary</title>
+</head>
+<body>
+
+
+	<script>
+		var company = {
+			sale: [{
+				name: 'ram thapa', salary: 40000
+			},{ name: 'sita kc', salary: 30000}],
+			account: [{
+				name: 'ramesh', salary: 34000
+			},{ name: 'bhawna', salary: 23000}],
+			hr: [{
+				name: 'gita', salary: 60000
+			}]
+		};
+
+
+
+
+		// document.write(company.sale[0].name);
+
+		var total = 0;
+		st =0 ;
+		at = 0;
+		
+		hrt =0 ;
+
+		
+
+		for(var i in company.sale){
+			 
+			st+= company.sale[i].salary;
+		}
+		for(var i in company.account){
+		
+			at+= company.account[i].salary;
+		}
+		for(var i in company.hr){
+		
+			hrt+= company.hr[i].salary;
+		}
+
+		total = st+at+hrt;
+		document.write("Total salary is "+ total);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Class</title>
+	</head>
+<body>
+	<script>
+
+		function Student(names, age){
+
+			this.names = names;
+			this.age = age;
+		}
+
+		var s1 = new Student("ram" ,40)
+
+		Student.prototype.output = function(){ return "Your name is "+this.names+" age is "+this.age};
+
+		document.write(s1.output());
+	</script>
+
+</body>
+</html>

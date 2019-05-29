@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>List of Employee</h2>
+	<div data-bind="template: { name: 'employee', foreach: employee, as: 'emp'}">
+	</div> 
+
+
+	<script type="text/html" id="employee">
+
+		<p>FullName: <span data-bind="text: fullname"></span></p>
+		<span>Contact:</span>
+		<ul data-bind="template: { name: 'Contact-template', foreach: contact, as:'cont'}"></ul>
+	</script>
+
+	<script type="text/html" id="Contact-template">
+		<li>
+			<p data-bind="text: cont"></p>
+		</li>
+	</script>
+
+	<script src="knockout.js"></script>
+	<script src="divyatechemployee.js"></script>
+
+
+</body>
+</html>

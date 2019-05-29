@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+		<script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" 
+         type = "text/javascript"></script>
+
+</head>
+<body>
+
+	<input data-bind = "value:line"/>
+	<button data-bind = "click:makeCapital">To Cap</button>
+
+	<script>
+		 function MakeCapitalLetter(){
+
+		 	this.line = ko.observable("nepal")
+
+		 	this.makeCapital = function(){
+
+		 		var text = this.line();
+
+		 		(this.line(text.toUpperCase()));
+
+		 	};
+		 }
+
+		ko.applyBindings(new MakeCapitalletter());
+	</script>
+
+</body>
+</html>

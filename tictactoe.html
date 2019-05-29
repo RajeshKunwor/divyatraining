@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Tic tac toe game 
+	</title>
+	<style>
+	td{
+		width:20px;
+		height:20px;
+	}
+	</style>
+</head>
+
+<body>
+	<table border="1">
+		<caption id="player">Player1</caption>
+		<tr>
+			<td onclick ="one()" id='one'></td>
+			<td onclick ="two()" id='two'></td>
+			<td onclick="three()" id='three'></td>
+		</tr>
+		<tr>
+			<td onclick = "four()" id='four'></td>
+			<td onclick ="five()" id='five'></td>
+			<td onclick ="six()" id='six'></td>
+		</tr>
+		<tr>
+			<td onclick ="seven()" id='seven'></td>
+			<td onclick ="eight()" id='eight'></td>
+			<td onclick ="nine()" id='nine'></td>
+		</tr>
+
+
+	</table>
+
+
+	<script>
+
+
+		var player1 = 'x'
+		var player2 = 'o'
+		var result1 = 'xxx'
+		var result2 = 'ooo'
+		var output1 = ''
+		var output2 = ''
+		
+		var turn = player1;	
+
+		function one(){
+
+			if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("one").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("one").innerHTML=player2
+				output2 = output2+player2
+			}
+	
+			win();
+		}
+
+		function two(){
+
+			
+			 if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("two").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("two").innerHTML=player2
+				output2 = output2+player2
+			}
+
+			win();
+
+		}
+		function three(){
+
+			
+			 if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("three").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("three").innerHTML=player2
+				output2 = output2+player2
+			}
+
+			win();
+		}
+
+		function four(){
+
+			
+			 if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("four").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("four").innerHTML=player2
+				output2 = output2+player2
+			}
+
+			win();
+	
+		}
+		function five(){
+
+			
+			 if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("five").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("five").innerHTML=player2
+				output2 = output2+player2
+			}
+
+			win();
+
+		}
+
+		function six(){
+
+			
+			 if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("six").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("six").innerHTML=player2
+				output2 = output2+player2
+			}
+
+			win();
+
+		}
+		
+
+		function seven(){
+
+			
+			 if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("seven").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("seven").innerHTML=player2
+				output2 = output2+player2
+			}
+
+			win();
+			
+		}	
+
+
+		function eight(){
+
+			
+			 if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("eight").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("eight").innerHTML=player2
+				output2 = output2+player2
+			}
+
+			win();
+
+		}
+
+
+		function nine(){
+
+			
+			 if(turn == player1){
+				turn = player2
+				document.getElementById("player").innerHTML="Player1"
+				document.getElementById("nine").innerHTML=player1
+				output1 = output1+player1
+
+			}
+			else if (turn == player2){
+				turn = player1
+				document.getElementById("player").innerHTML="Player2"
+				document.getElementById("nine").innerHTML=player2
+				output2 = output2+player2
+			}
+
+			win();
+		}
+
+		function win(){
+
+			v1 = document.getElementById("one").innerHTML;
+			v2 = document.getElementById("two").innerHTML;
+			v3 = document.getElementById("three").innerHTML;
+			v4 = document.getElementById("four").innerHTML;
+			v5 = document.getElementById("five").innerHTML;
+			v6 = document.getElementById("six").innerHTML;
+			v7 = document.getElementById("seven").innerHTML;
+			v8 = document.getElementById("eight").innerHTML;
+			v9 = document.getElementById("nine").innerHTML;
+
+
+			if((v1==v2)&&(v2==v3)&&(v1==v2)){
+
+				if(v1=='x'){
+					alert("Player1 Wins")
+				}
+				else if(v1=='o'){
+					alert("Player2 wins")
+				}
+
+				
+			}
+
+			if((v1==v4)&&(v4==v7)&&(v1==v7)){
+
+				if(v1=='x'){
+					alert("Player1 Wins")
+				}
+				else if(v1=='o'){
+					alert("Player2 wins")
+				}
+
+				
+			}
+
+			if((v1==v5)&&(v5==v9)&&(v1==v9)){
+
+				if(v1=='x'){
+					alert("Player1 Wins")
+				}
+				else if(v1=='o'){
+					alert("Player2 wins")
+				}
+
+				
+			}
+
+			if((v2==v5)&&(v5==v8)&&(v2==v8)){
+
+				if(v2=='x'){
+					alert("Player1 Wins")
+				}
+				else if(v2=='o'){
+					alert("Player2 wins")
+				}
+
+				
+			}
+			if((v3==v6)&&(v6==v9)&&(v3==v9)){
+
+				if(v3=='x'){
+					alert("Player1 Wins")
+				}
+				else if(v3=='o'){
+					alert("Player2 wins")
+				}
+
+				
+			}
+			if((v4==v5)&&(v5==v6)&&(v4==v6)){
+
+				if(v4=='x'){
+					alert("Player1 Wins")
+				}
+				else if(v4=='o'){
+					alert("Player2 wins")
+				}
+
+				
+			}
+			if((v7==v8)&&(v8==v9)&&(v7==v9)){
+
+				if(v7=='x'){
+					alert("Player1 Wins")
+				}
+				else if(v7=='o'){
+					alert("Player2 wins")
+				}
+
+				
+			}
+			if((v3==v5)&&(v5==v7)&&(v3==v7)){
+
+				if(v3=='x'){
+					alert("Player1 Wins")
+				}
+				else if(v3=='o'){
+					alert("Player2 wins")
+				}
+
+				
+			}
+			// if((v1==v2)&&(v2==v3)&&(v1==v2)){
+
+			// 	if(v1=='x'){
+			// 		alert("Player1 Wins")
+			// 	}
+			// 	else if(v1=='o'){
+			// 		alert("Player2 wins")
+			// 	}
+
+				
+			// }
+			// if(output1 == result1){
+			// 	alert( "Player1 wins")
+			// }
+			// else if(output2 == result2){
+
+			// 	alert("Player2 wins")
+
+			// }
+		}
+
+	</script>
+</body>
+</html>

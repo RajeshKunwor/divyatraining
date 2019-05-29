@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h2> Loading Data </h2>
+		<p><input data-bind="value: selectedValue"></p>
+
+		<table border="1">
+			<thead>
+				<th>Business</th>
+				<th>Category</th>
+			</thead>
+			<tbody data-bind="">
+				<tr>
+
+					<td><select data-bind="options: dataArray, optionsValue: 'farmer_id',value: selectedValue,  optionsText: 'business',  optionsCaption: 'Choose Business...'"> </select></td>
+					
+				</tr>
+			</tbody>
+
+		</table>	
+	
+		<p data-bind="text: selectedData, visible: selectedValue.length>0">"</p>
+
+		<script src="jquery.js"></script>
+		<script src="knockout.js"></script>
+		<script src="loadingdata.js"></script>
+</body>
+</html>

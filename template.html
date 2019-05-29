@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Template</title>
+		<script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" 
+	         type = "text/javascript"></script>
+	</head>
+
+	<body>
+		<h1> Demostration of Temlplate</h1>
+
+		<div data-bind="template: {name: 'divyatech', foreach: employee }"></div>
+
+
+
+		<script type="text/html" id="divyatech">
+
+			<h4>Name: <span data-bind = "text: fullName"></span></h4>
+			<h4>Post: <span data-bind="text: post"></span></h4>
+			<h4>Salary: <span data-bind="text:salary"></span></h4>
+
+
+		</script>
+
+
+		<script type="text/javascript">
+
+			function EmployeeViewModel(){
+
+				this.employee = [
+				{
+					fullName: "Deepak KC",
+					post: "QA",
+					salary: 34344,
+				},
+
+
+				{
+					fullName: "Bhagwan Thapa",
+					post: "Sofware Engineer",
+					salary: 80000,
+				},
+
+				{
+					fullName: "Shyam Thapa",
+					post: "SEO",
+					salary: 80000,
+				}
+
+			]
+
+			}
+
+			ko.applyBindings(new EmployeeViewModel());
+
+		</script>
+
+
+	</body>
+</html>
