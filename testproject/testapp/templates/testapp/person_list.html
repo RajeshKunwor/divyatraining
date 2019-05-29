@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PersonList</title>
+</head>
+<body>
+<table>
+		<caption>Information of Person</caption>
+		<thead>
+			<th>#</th>
+			<th>State</th>
+			<th>District</th>
+			<th>Municipality</th>
+			<th>Action</th>
+		</thead>
+		<tbody>
+            {% for p in person %}
+			<tr>
+				<td>{{p.id}}</td>
+
+                <td>{{ p.province }}</td>
+				<td>{{ p.district }}</td>
+				<td>{{ p.municipality }}</td>
+                <td><a href="{% url 'update_person' p.id %}">Update</a></td>
+			</tr>
+            {% endfor %}
+
+		</tbody>
+
+	</table>
+
+
+        <script src="{% static 'testapp/jquery.js' %}"></script>
+		<script src="{% static 'testapp/knockout.js' %}"></script>
+		<script src="{% static 'testapp/state.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<ol data-url = "{% url 'state' %}">-->
+        <!--{% for s in state %}-->
+         <!--<li>{{s.province}}</li>-->
+        <!--{% endfor %}-->
+    <!--</ol>   -->
+	<form method="post" action="{% url 'save' %}">
+			 {% csrf_token %}
+		<table border="1" data-url = "{% url 'state' %}" data-d-url = "{% url 'district' %}" data-m-url="{% url 'muni' %}">
+				<thead>
+					<th>Province</th>
+					<th>District</th>
+					<th>Municipality</th>
+				</thead>
+				<tbody data-bind="">
+
+					<tr>
+						<input type=hidden data-bind="value: selectedId">
+
+						<td><select data-bind="options: stateArray, optionsText: 'province',optionsValue: 'id', value: selectedState, optionsCaption: 'Choose State...'"> </select></td>
+
+						<td><select data-bind="options: districtArray, optionsText: 'district', optionsValue: 'id', value: selectedDistrict, optionsCaption: 'Choose District...'"> </select></td>
+						<td><select data-bind="options: muniArray, optionsText: 'municipality', optionsValue: 'id', value: selectedMunicipality, optionsCaption: 'Choose Municipality...' "></select></td>
+
+					</tr>
+				<tr>
+					<td><input type="submit" value="Save" data-bind="click: save"></td>
+				</tr>
+				</tbody>
+
+		</table>
+	</form>
+
+	<table id="person-table" border="1" data-p-url="{% url 'per' %}" data-p-u-url="{% url 'update' %}">
+		<caption>Information of Person</caption>
+		<thead>
+			<th>#</th>
+			<th>S.N.</th>
+			<th>State</th>
+			<th>District</th>
+			<th>Municipality</th>
+			<th>Action</th>
+
+		</thead>
+		<tbody data-bind="foreach: personArray">
+
+			<tr>
+				<td data-bind="text: id"></td>
+				<td data-bind="text: $index()+1"></td>
+				<td data-bind="text: province_id"></td>
+				<td data-bind="text: district_id"></td>
+				<td data-bind="text: municipality_id"></td>
+				<td><a href="# " data-bind="click: $root.update">Update</a></td>
+
+			</tr>
+
+
+		</tbody>
+
+	</table>
+
+
+        <script src="{% static 'testapp/jquery.js' %}"></script>
+		<script src="{% static 'testapp/knockout.js' %}"></script>
+		<script src="{% static 'testapp/state.js' %}"></script>
+</body>
+</html>

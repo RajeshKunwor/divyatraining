@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h2> Dropdown Data </h2>
+
+		<table border="1">
+			<thead>
+				<th>Province</th>
+				<th>District</th>
+			</thead>
+			<tbody data-bind="">
+				<tr>
+
+					<td><select data-bind="options: stateArray, value: selectedState, optionsCaption: 'Choose Stae...'"> </select></td>
+
+					<!--<td><select data-bind="options: itemArray, optionsText: 'item', optionsValue: 'farmer_id', value: selectedItem, optionsCaption: 'Choose Items...'"> </select></td>-->
+
+				</tr>
+			</tbody>
+
+		</table>
+
+
+
+
+		<script src="jquery.js"></script>
+		<script src="knockout.js"></script>
+		<script src="dependent_dropdown.js"></script>
+</body>
+</html>
