@@ -127,8 +127,8 @@ function ViewModel(){
 
 
 	self.addSquareToPlayer = function(gridSquare){
-		console.log("row is"+gridSquare.row);
-		console.log("col is"+gridSquare.col);
+		// console.log("row is"+gridSquare.row);
+		// console.log("col is"+gridSquare.col);
 		self.currentPlayer.squares[gridSquare.row].push(0);
 		self.currentPlayer.squares[gridSquare.col].push(0);
 

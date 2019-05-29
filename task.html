@@ -6,8 +6,8 @@
 </head>
 
 <body>
-	<h3>Demo of Json</h3>
-	<table id="mytable">
+	<h3>Demo of Tree Table</h3>
+	<table id="mytable" border="1">
 		<thead>
 			<th>Particular</th>
 		</thead>
@@ -20,10 +20,15 @@
 	<script type="text/html" id="treetable">
 		
 				
-				<tr data-bind="template: 'treetable' ">
+				<tr data-bind="attr: {'data-tt-id': id, 'data-tt-parent-id': parent}">
 				
 					<td><span data-bind="text: name"></span></td>
 				</tr>
+				<!-- ko foreach: categories -->
+			       <!-- ko template: 'treetable' -->
+			        <!-- /ko -->
+
+			   <!-- /ko -->
 
 	</script>
 

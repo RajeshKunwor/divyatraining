@@ -18,8 +18,8 @@
 			</thead>
 			<tbody data-bind="foreach: items ">
 				<tr>
-					<td> <select data-bind="options: $root.itemSet, value: itemList, optionsText: 'name'"></select></td>
-					<td><input data-bind="value: quantity"></td>
+					<td> <select data-bind="options: $root.itemSet, value: itemList, optionsText: 'name', click: call"></select></td>
+					<td><input data-bind="value: quantity, hasFocus: flag "></td>
 					<td><input data-bind="value: newRate"></td>
 					<td><span data-bind="text: total"></span></td>
 					<td><button data-bind="click: $root.removeItem">Delete</button></td>

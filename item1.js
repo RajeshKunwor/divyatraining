@@ -5,7 +5,10 @@ function Item(initialData, quantity){
 	self.quantity = ko.observable(quantity);
 	
 
-	
+	self.flag = ko.observable(false);
+	self.call = function(){
+		self.flag(true);
+	}
 
 	self.newRate = ko.computed(function(){
 		var rate = self.itemList().rate;
@@ -42,7 +45,7 @@ function ItemViewModel(){
 
 			new Item(self.itemSet[0],0)
 		]);
-	
+	console.log(self.items())
 
 	self.addItem = function(){
 
@@ -92,5 +95,6 @@ function ItemViewModel(){
 
 
 }
+
 
 ko.applyBindings(new ItemViewModel());
