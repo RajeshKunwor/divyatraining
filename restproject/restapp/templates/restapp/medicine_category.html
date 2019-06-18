@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medicine Categroy</title>
+    <link rel="stylesheet" href ="{% static 'jquery-treetable-master/css/jquery.treetable.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery-treetable-master/css/jquery.treetable.theme.default.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        table {
+          border-collapse: collapse;
+           width: 40%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="containter">
+        <div class="row">
+            <div class="col-md-6 p-5">
+                <h4> <span class="bg-info p-2 text-white">Medicine Category List</span></h4>
+                <table border="1" id="mytable" data-url = "{% url 'list_medicine_category' %}" category-medicine-url="{% url 'list_medicine_category_medicine' %}">
+                    <thead>
+                    <tr>
+                        <th>Category</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- ko foreach: medicineCategoryMedicine -->
+                         <tr data-bind="attr: { 'data-tt-id': id , 'data-tt-parent-id': parent}">
+                            <td data-bind="text: name"></td>
+                        </tr>
+                    <!-- /ko -->
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6 p-3 border">
+                <form method="post" action="{% url 'create_medicine_category' %}">
+                    <h4> <span class="bg-info p-2 text-white">Medicine Category Form</span></h4>
+                    <div class="form-group">
+                      <label for="category">Category:</label>
+                        <select class="form-control"  id="category" data-bind="options: medicineCategory,
+                                         value: parent,
+                                         optionsValue: 'id',
+                                         optionsText: 'name',
+                                         optionsCaption: 'Select....'"></select>
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input data-bind="value: name" class="form-control" id="name">
+                    </div>
+                     <input class="btn btn-success float-right" type="submit" data-bind="click: $root.save" value="Submit"/>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 p-5 border">
+                <h4> <span class="bg-info p-2 text-white">Medicine Form</span></h4>
+                <form method="post" action="{% url 'create_medicine' %}" id="medicineForm">
+                    <div class="form-group">
+                        <label for="cate">Medicine Category:</label>
+                        <select class="form-control" id="cate" data-bind="options: medicineCategory,
+                                                       value: category,
+                                                      optionsValue: 'id',
+                                                      optionsText: 'name',
+                                                      optionsCaption: 'Select...'">
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="medicine">Medince Name:</label>
+                        <input class="form-control" id="medicine" data-bind="value: name">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success float-right" value="Submit" data-bind="click: saveMedicine">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'restapp/jquery.js' %}"></script>
+    <script src="{% static 'restapp/knockout.js' %}"></script>
+    <script src="{% static 'restapp/medicine_category.js' %}"></script>
+    <script src="{% static 'restapp/jquery.js' %}"></script>
+	<script src ="{% static 'jquery-treetable-master/jquery.treetable.js' %}"></script>
+
+</body>
+</html>

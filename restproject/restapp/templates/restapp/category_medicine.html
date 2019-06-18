@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medicine Category</title>
+    <style>
+        .cate{
+            font-size: 16px;
+            font-weight: bold;
+           }
+
+    </style>
+     <link rel="stylesheet" href ="{% static 'jquery-treetable-master/css/jquery.treetable.css' %}">
+    <link rel="stylesheet" href="{% static 'jquery-treetable-master/css/jquery.treetable.theme.default.css' %}">
+</head>
+<body>
+    <a href="#" onclick="jQuery('.advance').treetable('expandAll'); return false;">Expand all</a> |
+    <a href="#" onclick="jQuery('.advance').treetable('collapseAll'); return false;">Collapse all</a>
+    <table border="1"  class="advance" id ="mytable" load-data="{% url 'load_category' %}">
+        <thead>
+        <tr>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody data-bind="template: { name: 'category_template', foreach: category }">
+
+        </tbody>
+    </table>
+
+    <script type="text/html" id="category_template">
+        <tr data-bind="attr: { 'data-tt-id' : id , 'data-tt-parent-id': parent }, css: { cate: parent == null}">
+            <td data-bind="text: name"></td>
+        <td>--</td>
+
+        </tr>
+        <!-- ko foreach: medicine_list -->
+            <!-- ko template: 'medicine_template' -->
+            <!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko foreach: category_list -->
+			       <!-- ko template: 'category_template' -->
+			        <!-- /ko -->
+        <!-- /ko -->
+
+    </script>
+    <script type="text/html" id="medicine_template">
+        <tr style=" color: blue;" data-bind="attr: { 'data-tt-id': id+'a', 'data-tt-parent-id': category }">
+            <td data-bind="text: name"></td>
+                <td data-bind="text: rate"></td>
+         </tr>
+    </script>
+
+     <script src="{% static 'restapp/jquery.js' %}"></script>
+    <script src="{% static 'restapp/knockout.js' %}"></script>
+	<script src ="{% static 'jquery-treetable-master/jquery.treetable.js' %}"></script>
+    <script src="{% static 'restapp/category_medicine.js' %}"></script>
+
+</body>
+</html>

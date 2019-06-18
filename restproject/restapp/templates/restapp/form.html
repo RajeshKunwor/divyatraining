@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        .error span{
+            color: red;
+        }
+        .error input{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p data-bind="css: { error: fullName.hasError }">
+            <input data-bind="value: fullName, valueUpdate: 'afterkeydown'"/>
+            <span data-bind="visible: fullName.hasError, text: fullName.validationMessage"></span>
+        </p>
+    </form>
+    <script src="{% static 'restapp/jquery.js' %}"></script>
+    <script src="{% static 'restapp/knockout.js' %}"></script>
+    <script src="{% static 'restapp/validation.js' %}"></script>
+</body>
+
+</html>

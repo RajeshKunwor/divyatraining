@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Invoice Medicine</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row  border">
+            <div clss="col-md-8 p-3 ">
+                <h4 class="bg-primary text-white"> Sale Invoice</h4>
+            </div>
+        </div>
+        <div class="row border p-3">
+            <div class="col-md-8">
+                <form id="invoice-form" method="post"
+                      load-customer="{% url 'load-customer' %} "
+                      action="{% url 'create-invoice' %}"
+                      update="{% url 'invoice-update' %}"
+                      load-medicine="{% url 'load-medicine' %}">
+
+                    <div class="input-group w-50">
+                            Customer: <select class="form-control" data-bind="options: customerList,
+                                                                optionsText: 'name',
+                                                                 optionsValue: 'id',
+                                                                 value: customer,
+                                                                 optionsCaption: 'Choose Customer...'"
+                            >
+
+                            </select>
+
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                Add Customer
+                              </button>
+                            </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bind="click: add">Add</button>
+                    <table class="table table-bordered">
+                        <thead>
+                        <th>Medicine Name</th>
+                        <th>Rate</th>
+                        <th>Quantity</th>
+                        <th>Sub Total</th>
+                        <th>Action</th>
+                        </thead>
+
+                        <tbody data-bind="foreach: medicineSaleArray">
+                            <tr>
+                                <td>
+                                    <select class="form-control" data-bind="options: $root.medicineList,
+                                                       optionsText: 'name',
+
+                                                       value: medicineId">
+                                    </select>
+                                </td>
+                                <td><input class="form-control" data-bind="textInput: newRate"> </td>
+                                <td><input class="form-control" type="number" data-bind="value: quantity"> </td>
+                                <td data-bind="text: subTotal"></td>
+                                <td><a class="btn btn-danger" href="#" data-bind="click: $root.remove">Remove</a></td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td colspan="4">Discount</td>
+                            <td><input class="form-control" data-bind="value: discount"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">GrandTotal </td>
+                            <td><span data-bind="text: grandTotal"></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Net Total</td>
+                            <td><span data-bind="text: netTotal"></span> </td>
+                        </tr>
+
+                  </table>
+
+                    <button class=" float-right btn btn-success" data-bind="click: saveInvoice">Save</button>
+                </form>
+
+            </div>
+            <div id="invoice"  load-detail="{% url 'invoice-detail' %}" load-invoice="{% url 'invoice-list' %}" class="col-md-4">
+                <h4 class="bg-info p-3">Invoice list</h4>
+                <!-- ko foreach: invoice_list -->
+               <ul class="list-group">
+                    <a href="{% url 'invoice-detail' %}" data-bind="click: $root.loadDetail" class="list-group-item list-group-item-action-info list-group-item-info"><span data-bind="text: id"></span> | <span data-bind="text: created_date"></span></a>
+               </ul>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Customer Form-->
+    <div class="container">
+
+
+      <!-- The Modal -->
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Add Customer Form</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form method="post" id="customer-form" action="{% url 'create-customer' %}">
+
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Full Name</span>
+                        </div>
+                        <input data-bind="value: customerName" type="text" class="form-control">
+                      </div>
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text">Address</span>
+                          </div>
+                          <input data-bind="value: customerAddress" text" class="form-control">
+                      </div>
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text">Contact</span>
+                          </div>
+                          <input data-bind="value: customerContact" class="form-control" type="text">
+                      </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button data-bind="click: saveCustomer" type="button" class="btn btn-success">Save</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+
+    <script src="{% static 'restapp/jquery.js' %}"></script>
+    <script src="{% static 'restapp/knockout.js' %}"></script>
+    <script src="{% static 'restapp/sale_medicine.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book List</title>
+</head>
+<body>
+
+    <h4> List of Books</h4>
+    <table border="1" data-url="{% url 'book_list' %}">
+        <thead>
+        <tr>
+            <th>S.N.</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Pages</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach: bookList">
+        <tr>
+            <td data-bind="text: $index()+1"></td>
+            <td data-bind="text: title"></td>
+            <td data-bind="text: author"></td>
+            <td data-bind="text: publisher"></td>
+            <td data-bind="text: pages"></td>
+            <td data-bind="text: price"></td>
+            <td><a href="#" data-bind="click: $root.update">Update</a> </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h4> Update Form</h4>
+    <form action="{% url 'update-book' %}">
+        Title:<input data-bind="value: title">
+        Author: <input data-bind="value: author">
+        Publisher: <input data-bind="value: publisher">
+        Pages: <input data-bind="value: pages">
+        Price: <input data-bind="value: price">
+        <input type="submit" data-bind="click: saveUpdate" value="Save">
+    </form>
+
+    <h4> New Book Form</h4>
+    <form id="create_form" action="{% url 'create-book' %}">
+        Title:<input data-bind="value: title">
+        Author: <input data-bind="value: author">
+        Publisher: <input data-bind="value: publisher">
+        Pages: <input data-bind="value: pages">
+        Price: <input data-bind="value: price">
+        <input type="submit" data-bind="click: save" value="Save">
+    </form>
+    <script src="{% static 'restapp/jquery.js' %}"></script>
+    <script src="{% static 'restapp/knockout.js' %}"></script>
+    <script src="{% static 'restapp/book_list.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book List</title>
+</head>
+<body>
+    <h4>List of Book</h4>
+    <table>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Price</th>
+            <th>Page</th>
+        </tr>
+        </thead>
+        <tbddy>
+            {% for b in book %}
+            <tr>
+                <td>{{ b.title }}</td>
+                <td>{{ b.author }}</td>
+                <td>{{ b.publisher }}</td>
+                <td>{{ b.price }}</td>
+                <td>{{ b.pages }}</td>
+            </tr>
+            {% endfor %}
+        </tbddy>
+    </table>
+</body>
+</html>
