@@ -96,7 +96,7 @@ class SaleInvoiceSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data):
-        invoices_data = validated_data.pop('invoice')
+        invoices_data = validated_data.pop('invoice_detail')
         invoice = SaleInvoice.objects.create(**validated_data)
         for invoice_data in invoices_data:
             SaleInvoiceDetail.objects.create(invoice=invoice, **invoice_data)
@@ -104,9 +104,9 @@ class SaleInvoiceSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         invoice_detail_data = validated_data.pop('invoice_detail')
-
+        new_length = len(invoice_detail_data)
         invoice_detail_list = instance.invoice_detail.all()
-
+        old_length = len(invoice_detail_list)
         instance.customer = validated_data.get('customer',instance.customer)
         instance.amount = validated_data.get('amount', instance.amount)
         instance.discount = validated_data.get('discount', instance.discount)
@@ -117,6 +117,13 @@ class SaleInvoiceSerializer(serializers.ModelSerializer):
                 old_invoice_data.medicine = invoice_data.get('medicine', old_invoice_data.medicine)
                 old_invoice_data.save()
 
+        cal_length = new_length-old_length
+        if cal_length>0:
+            for invoice_data in invoice_detail_data[cal_length:]:
+                SaleInvoiceDetail.objects.create(invoice=instance, **invoice_data)
+        if cal_length<0:
+            for invoice_data in invoice_detail_list[new_length:]:
+                SaleInvoiceDetail.objects.filter(id=invoice_data.id).delete()
 
         return instance
 

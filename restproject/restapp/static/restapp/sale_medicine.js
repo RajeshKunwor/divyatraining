@@ -1,13 +1,23 @@
 function Medicine(medi, quantity){
     var self = this;
-    self.medicineId = ko.observable(medi);
-    self.rate = ko.observable();
-    self.newRate = ko.pureComputed({
-        read: function(){ self.rate(self.medicineId().rate);return self.medicineId().rate;},
-        write: function(value){ self.rate(value);}
+    self.medicineId = ko.observable(medi.id);
 
+    self.rate = ko.observable(0);
+//    self.newRate = ko.pureComputed({
+//        read: function(){ self.rate(self.medicineId().rate);return self.medicineId().rate;},
+//        write: function(value){ self.rate(value);}
+//
+//
+//    });
+     ko.computed(function(){
+        var medicine_id = self.medicineId();
+        $.get("http://127.0.0.1:8000/rest/load_medicine_rate", { medicine_id: medicine_id}, function(data){
+            console.log(data)
+            self.rate(data.rate);
 
+           });
     });
+
     self.quantity = ko.observable(quantity);
     self.subTotal = ko.computed(function(){
 
@@ -149,8 +159,9 @@ function ViewModel(){
             self.discount(data['discount']);
             self.medicineSaleArray.removeAll();
             for (i in data['invoice_detail']){
-                      console.log(data['invoice_detail'][i].medicine)
-                      self.medicineSaleArray.push(new Medicine(self.medicineList[data['invoice_detail'][i].medicine],data['invoice_detail'][i].quantity));
+
+                    var medicine = { 'id': data['invoice_detail'][i].medicine}
+                   self.medicineSaleArray.push(new Medicine(medicine,data['invoice_detail'][i].quantity));
 
             }
 

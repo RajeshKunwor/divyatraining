@@ -57,11 +57,11 @@
                                 <td>
                                     <select class="form-control" data-bind="options: $root.medicineList,
                                                        optionsText: 'name',
-
+                                                       optionsValue: 'id',
                                                        value: medicineId">
                                     </select>
                                 </td>
-                                <td><input class="form-control" data-bind="textInput: newRate"> </td>
+                                <td><input class="form-control" data-bind="value: rate"> </td>
                                 <td><input class="form-control" type="number" data-bind="value: quantity"> </td>
                                 <td data-bind="text: subTotal"></td>
                                 <td><a class="btn btn-danger" href="#" data-bind="click: $root.remove">Remove</a></td>

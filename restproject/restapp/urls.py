@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^invoice_list_api/$', SaleInvoiceListApi.as_view(), name='invoice-list'),
     url(r'^invoice_detail/$', SaleInvoiceDetailView.as_view(), name='invoice-detail'),
     url(r'^update_invoice/$', SaleInvoiceUpdateView.as_view(),name='invoice-update'),
+    url(r'^load_medicine_rate/$', MedicineRateLoadView.as_view(), name='load-medicine-rate'),
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

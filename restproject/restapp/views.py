@@ -225,7 +225,7 @@ class CreateSaleInvoice(APIView):
         data = json.loads(request.body)
         detail = []
         for medi in data['invoice']:
-            detail.append({'medicine': medi['medicineId'].get('id'),
+            detail.append({'medicine': medi['medicineId'],
                            'quantity': medi['quantity']})
 
         invoice_data = {
@@ -269,6 +269,15 @@ class CreateSaleInvoice(APIView):
         # return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
+class MedicineRateLoadView(APIView):
+
+    def get(self, request):
+        medicine_id = request.GET.get('medicine_id')
+        medicine = Medicine.objects.get(id=medicine_id)
+        serializer = MedicineSerializer(medicine)
+        return Response(serializer.data)
+
+
 class SaleInvoiceListApi(APIView):
 
     def get(self, request):
@@ -307,7 +316,7 @@ class SaleInvoiceUpdateView(APIView):
         data = json.loads(request.body)
         detail = []
         for medi in data['invoice']:
-            detail.append({'medicine': medi['medicineId'].get('id'),
+            detail.append({'medicine': medi['medicineId'],
                            'quantity': medi['quantity']})
 
         invoice_data = {
@@ -339,7 +348,6 @@ class CreateCustomerView(APIView):
 
     def post(self, request):
         data = request.data
-        print data
         serializer = CustomerSerializer(data=data)
         if serializer.is_valid():
             c = serializer.save()
