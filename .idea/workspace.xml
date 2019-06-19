@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba667fc-fdaf-4994-9c9a-881ffd3b132a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/ex.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/GPL-LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/MIT-LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/css/jquery.treetable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/css/jquery.treetable.theme.default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/css/screen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/jquery.treetable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/test/jquery.treetable.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/treetable.jquery.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/book_list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/category_medicine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/invoice_detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/invoice_list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/knockout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/medicine_category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/book_create_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/book_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/book_lists.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/category_medicine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/invoice_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/medicine_category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/practice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_invoice_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restproject/restapp/trees.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myproject" beforeDir="false" afterPath="$PROJECT_DIR$/../myproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/restframework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/restframework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restproject/restapp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/restproject/restapp/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restproject/restapp/static/restapp/sale_medicine.js" beforeDir="false" afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/sale_medicine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_medicine.html" beforeDir="false" afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_medicine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restproject/restapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/restproject/restapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restproject/restapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/restproject/restapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../training/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../training/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,34 +88,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-535">
-              <caret line="274" column="52" selection-start-line="274" selection-start-column="52" selection-end-line="274" selection-end-column="52" />
+            <state relative-caret-position="-10">
+              <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <marker date="1560932949509" expanded="true" signature="579:663" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="5208:5305" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="6606:9064" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="6636:7397" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="8593:8825" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="9166:9394" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="9432:10562" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="9724:10562" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="10635:10641" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="10844:10845" ph="..." />
-                <marker date="1560932949509" expanded="true" signature="10844:10850" ph="..." />
+                <marker date="1560937764575" expanded="true" signature="579:663" ph="..." />
+                <marker date="1560937764575" expanded="true" signature="5208:5305" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-268">
-              <caret line="92" column="74" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="74" />
+            <state relative-caret-position="1519">
+              <caret line="117" column="39" lean-forward="true" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -170,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
+            <state relative-caret-position="304">
               <caret line="66" column="99" selection-start-line="66" selection-start-column="99" selection-end-line="66" selection-end-column="99" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
@@ -187,7 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="495">
               <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -674,7 +621,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
+        <state relative-caret-position="304">
           <caret line="66" column="99" selection-start-line="66" selection-start-column="99" selection-end-line="66" selection-end-column="99" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
@@ -689,7 +636,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="495">
           <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -706,21 +653,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-535">
-          <caret line="274" column="52" selection-start-line="274" selection-start-column="52" selection-end-line="274" selection-end-column="52" />
+        <state relative-caret-position="-10">
+          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
-            <marker date="1560932949509" expanded="true" signature="579:663" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="5208:5305" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="6606:9064" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="6636:7397" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="8593:8825" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="9166:9394" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="9432:10562" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="9724:10562" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="10635:10641" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="10844:10845" ph="..." />
-            <marker date="1560932949509" expanded="true" signature="10844:10850" ph="..." />
+            <marker date="1560937764575" expanded="true" signature="579:663" ph="..." />
+            <marker date="1560937764575" expanded="true" signature="5208:5305" ph="..." />
           </folding>
         </state>
       </provider>
@@ -734,8 +672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-268">
-          <caret line="92" column="74" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="74" />
+        <state relative-caret-position="1519">
+          <caret line="117" column="39" lean-forward="true" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
