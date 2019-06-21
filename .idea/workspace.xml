@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba667fc-fdaf-4994-9c9a-881ffd3b132a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../myproject" beforeDir="false" afterPath="$PROJECT_DIR$/../myproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../training/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../training/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,33 +69,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_medicine.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-480">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="1260">
+              <caret line="84" column="78" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
+              <folding>
+                <element signature="e#5407#5414#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restproject/restapp/static/restapp/sale_medicine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
+            <state relative-caret-position="210">
+              <caret line="242" column="64" lean-forward="true" selection-start-line="242" selection-start-column="64" selection-end-line="242" selection-end-column="64" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <marker date="1560938034249" expanded="true" signature="579:663" ph="..." />
-                <marker date="1560938034249" expanded="true" signature="5208:5305" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1519">
-              <caret line="117" column="39" lean-forward="true" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
+            <state relative-caret-position="287">
+              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -115,27 +106,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restproject/restapp/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="66" column="99" selection-start-line="66" selection-start-column="99" selection-end-line="66" selection-end-column="99" />
-              <folding>
-                <element signature="e#24#63#0" expanded="true" />
-                <marker date="1560845343492" expanded="true" signature="198:199" ph="..." />
-                <marker date="1560845343492" expanded="true" signature="198:204" ph="..." />
-                <marker date="1560845343492" expanded="true" signature="1059:1060" ph="..." />
-                <marker date="1560845343492" expanded="true" signature="1059:1065" ph="..." />
-                <marker date="1560845343492" expanded="true" signature="1624:1630" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+            <state relative-caret-position="137">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -208,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,27 +219,13 @@
               <item name="restframework" type="b2602c69:ProjectViewProjectNode" />
               <item name="restframework" type="462c0819:PsiDirectoryNode" />
               <item name="restproject" type="462c0819:PsiDirectoryNode" />
-              <item name="restapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="restframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="restframework" type="462c0819:PsiDirectoryNode" />
-              <item name="restproject" type="462c0819:PsiDirectoryNode" />
-              <item name="restapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="restapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="restframework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="restframework" type="462c0819:PsiDirectoryNode" />
-              <item name="restproject" type="462c0819:PsiDirectoryNode" />
               <item name="restproject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,12 +233,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../myproject" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/restproject/restapp/static" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/restproject/restapp/static/restapp" />
       <recent name="$PROJECT_DIR$/restproject/restapp/templates/restapp" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/restproject/restapp/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -636,8 +595,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        <state relative-caret-position="137">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -646,19 +605,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_medicine.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="1260">
+          <caret line="84" column="78" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
+          <folding>
+            <element signature="e#5407#5414#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
+        <state relative-caret-position="210">
+          <caret line="242" column="64" lean-forward="true" selection-start-line="242" selection-start-column="64" selection-end-line="242" selection-end-column="64" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
-            <marker date="1560938034249" expanded="true" signature="579:663" ph="..." />
-            <marker date="1560938034249" expanded="true" signature="5208:5305" ph="..." />
           </folding>
         </state>
       </provider>
@@ -672,8 +632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1519">
-          <caret line="117" column="39" lean-forward="true" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
+        <state relative-caret-position="287">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
