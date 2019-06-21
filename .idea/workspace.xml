@@ -2,7 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba667fc-fdaf-4994-9c9a-881ffd3b132a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/ex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/GPL-LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/MIT-LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/css/jquery.treetable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/css/jquery.treetable.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/css/screen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/jquery.treetable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/test/jquery.treetable.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/jquery-treetable-master/treetable.jquery.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/book_list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/category_medicine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/invoice_detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/invoice_list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/knockout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/medicine_category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/sale_medicine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/static/restapp/validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/book_create_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/book_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/book_lists.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/category_medicine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/invoice_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/medicine_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_invoice_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_medicine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/trees.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/restproject/restapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myproject" beforeDir="false" afterPath="$PROJECT_DIR$/../myproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/restframework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/restframework.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +56,7 @@
     <session id="-1091926604">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -56,12 +98,14 @@
           <entry key="html" value="8556" />
           <entry key="js" value="7244" />
           <entry key="py" value="24896" />
+          <entry key="txt" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="8556" />
           <entry key="JavaScript" value="7244" />
+          <entry key="PLAIN_TEXT" value="13" />
           <entry key="Python" value="24896" />
         </counts>
       </usages-collector>
@@ -72,8 +116,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_medicine.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="84" column="78" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
+            <state relative-caret-position="210">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="e#5407#5414#1" expanded="true" />
               </folding>
@@ -134,6 +178,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -360,7 +405,7 @@
       <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4976852" weight="0.61433446" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32919255" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" weight="0.32919255" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39906833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -398,6 +443,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/restproject/restproject/urls.py">
@@ -605,8 +654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/restproject/restapp/templates/restapp/sale_medicine.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="78" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
+        <state relative-caret-position="210">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
             <element signature="e#5407#5414#1" expanded="true" />
           </folding>
