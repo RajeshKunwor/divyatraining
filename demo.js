@@ -6,16 +6,26 @@ $.validator.addMethod('mobile', function(value, element,params){
 	return this.optional(element)||(/^(98|97|96)\d{8}$/).test(element.value)
 },"Mobile number must be in format.");
 
+$.validator.addMethod('strings', function(value, element){
+	return this.optional(element)||(/^([^0-9]|\s)\D+$/).test(value)
+}, "Fullname must be valid");
+
+$.validator.addMethod('address', function(value, element){
+	return this.optional(element)||(/^([^0-9]|\s)\D+$/).test(value)
+}, "Address must be valid");
+
 $(document).ready(function(){
 	$("#customer-form").validate({
 		rules: {
 			fullname: {
 				required: true,
-				minlength: 3
+				minlength: 3,
+				strings: true,
 			},
 			address: {
 				required: true,
-				minlength: 3
+				minlength: 3,
+				address: true
 			},
 			age: {
 				required: true,
@@ -42,6 +52,19 @@ $(document).ready(function(){
 			mobile_number: {
 				required: true,
 				mobile: true
+			},
+			passion: {
+				required: true
+			},
+			password: {
+				required: true,
+				minlength: 8,
+				maxlength: 32,
+				
+			},
+			cpassword: {
+				required: true,
+				equalTo: "#password"
 			}
 		},
 
@@ -76,6 +99,17 @@ $(document).ready(function(){
 			},
 			mobile_number: {
 				required: "Mobile number must be required."
+			},
+			passion: {
+				required: "At least one passion be choosed."
+			},
+			password: {
+				required: "Password must not be provided.", 
+				minlength: "Password must be 8 characters.",
+				
+			},
+			cpassword: {
+				equalTo: "Confirm password must be equal as above."
 			}	
 		}
 	});
